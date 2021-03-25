@@ -2,7 +2,7 @@
   <div>
     <div class="heading">
       <div class="title">
-        <h1>PUG</h1>
+        <h1>PUGS</h1>
         <div class="overlay"></div>
       </div>
     </div>
