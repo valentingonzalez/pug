@@ -2,11 +2,11 @@
   <div>
     <div class="heading">
       <div class="title">
-        <h1>PUGS</h1>
+        <h1>PUG</h1>
         <div class="overlay"></div>
       </div>
     </div>
-    <div class="text-container my-5">
+    <div class="container my-5">
       <div class="text-block">
         <div>
           Pugs are atypical dogs. They are not “useful” dogs, in a husky or German shepherds kind of way, not
@@ -16,9 +16,9 @@
           personality with a lot of humor, has earned them a place in the household of some of the most cold-hearted
           people history has ever known, thus earning the nickname "the clown of dogs".
           <br><br>
-          <div class="d-flex align-items-center">
-            <iframe src="https://open.spotify.com/embed/album/1xKeg2riD39VcTIfFZ5F5X" width="300" height="260" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            <div class="ml-5">
+          <div class="flex-column flex-md-row d-flex align-items-center">
+            <iframe class="w-100 mb-4 mb-md-0" src="https://open.spotify.com/embed/album/1xKeg2riD39VcTIfFZ5F5X" width="300" height="260" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="ml-md-5">
               Like their canine counterparts, Pug is an atypical band.
               <br><br>
               They have been playing together in the state of Nayarit for the last two years, building an organic fan-base,
@@ -34,31 +34,39 @@
       </div>
     </div>
     <div class="album">
-      <div class="text-center text-container">
+      <div class="text-center container">
       </div>
     </div>
     <div class="videos">
-      <div class="text-center text-container">
+      <div class="text-center container">
         <iframe width="100%" height="500" src="https://www.youtube.com/embed/qOpgV2a2y6M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
 
+    <!--<stage-plot />-->
     <div class="stage-plot">
-      <div class="text-center text-container">
+      <div class="text-center container">
         <h2 class="mb-5">STAGE PLOT</h2>
-        <img class="mw-100 mb-5" src="/assets/images/stage-plot-test.png" alt="">
+        <img class="mw-100 mb-5" src="/assets/images/plot.png" alt="">
       </div>
     </div>
+    <channel-list />
 
-    <!--<div class="text-center text-container">
+    <!--<div class="text-center container">
       <iframe width="100%" height="500" src="https://www.youtube.com/embed/nscHMTnqVo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>-->
   </div>
 </template>
 
 <script>
+import channelList from '@/components/channelList';
+//import stagePlot from '@/components/stagePlot';
 export default {
-  name: 'Epk'
+  name: 'Epk',
+  components: {
+    'channel-list': channelList,
+    //'stage-plot': stagePlot
+  }
 }
 </script>
 
@@ -98,5 +106,15 @@ export default {
   .stage-plot {
     padding: 50px 0;
     background: rgba(0,0,0,.5);
+  }
+  @media (max-width: 992px) {
+    .heading {
+      max-height: 300px;
+      background-repeat: no-repeat;
+      background-attachment: unset;
+      .title {
+        max-height: 300px;
+      }
+    }
   }
 </style>

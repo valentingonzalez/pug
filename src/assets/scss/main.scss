@@ -16,10 +16,8 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 400;
 }
 
-.text-container {
+.container {
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .text-block {
   font-weight: 300;
@@ -27,3 +25,23 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 34px;
   color: #fff;
 }
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .text-block {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .video {
+    height: 200px
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

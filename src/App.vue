@@ -3,7 +3,7 @@
     <Epk />
     <footer>
       <div class="d-flex justify-content-center mb-5 align-items-center h-100">
-        <div class="d-flex mb-5">
+        <div class="d-flex mb-md-5">
           <a href="https://instagram.com/pugband" target="_blank">
             <gb-social-button class="mx-2" network="instagram" iconTheme="white" reverse />
           </a>
@@ -50,14 +50,22 @@ export default {
   footer {
     background: url('/assets/images/footer-bg.jpeg');
     background-size: cover;
-    background-size: 100% auto;
-    background-position: center bottom -120px;
-    background-attachment: fixed;
+
+    background-position: center;
+    //background-position: center bottom -120px;
+
     background-repeat: no-repeat;
     height: 600px;
     .gb-social-button {
-
       box-shadow: 2px 4px 5px rgba(0,0,0,.5);
+      background-color: rgba(0,0,0,.5) !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      height: 158px;
+      background-position: center bottom 0;
     }
   }
 </style>
