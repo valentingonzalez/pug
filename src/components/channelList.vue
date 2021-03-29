@@ -37,7 +37,7 @@ export default {
         { num: '9', inst: 'Octapad', conn: 'Line DI' },
         { num: '10', inst: 'bass amp', conn: 'Line DI' },
         { num: '11', inst: 'guitar amp', conn: 'shure SM57' },
-        { num: '12', inst: 'synth', conn: 'shure beta 52' },
+        { num: '12', inst: 'synth', conn: 'Line DI' },
         { num: '13', inst: 'keyboards', conn: 'Line DI' },
         { num: '14', inst: 'keyboards', conn: 'Line DI' },
         { num: '15', inst: 'Synth', conn: 'Line DI' },

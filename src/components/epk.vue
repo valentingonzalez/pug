@@ -2,7 +2,7 @@
   <div>
     <div class="heading">
       <div class="title">
-        <h1>PUG</h1>
+        <h1>PUG<span class="epk">epk</span></h1>
         <div class="overlay"></div>
       </div>
     </div>
@@ -23,13 +23,15 @@
               <br><br>
               They have been playing together in the state of Nayarit for the last two years, building an organic fan-base,
               much more concerned with their electrifying live performances than their instagram posts, (an active web
-              presence is not so needed in towns where word-of-mouth and old-school marketing techniques still hold their place).
+              presence is not so needed in towns where word-of-mouth and old-school marketing techniques still hold their place)
+              <a class="link font-weight-bold small" @click.prevent="toggleCompleteBio" href="#">Read {{completeBio ? 'less' : 'more'}}</a>
             </div>
           </div>
-          <br><br>
-          Their chosen path to success is anomalous as well: four experienced musicians from different cities in Argentina, by luck, or chance or synchronicity altogether converge for a period of time in a town of around 3000 inhabitants: San Francisco, Nayarit, on the Mexican pacific coastline. Instead of going to the Big city to follow the narrative of the average Rock n roll mythology, they decide to stay local, searching for a real human following in an evermore virtual world. The town is actively visited by travelers from all around the world, so it is here where they have the chance to connect with people from very different places while retaining the unique aspects of a small community scene. The music is also something different, driven by poetic lyrics written in Spanish, groovy tunes that strive to get outside the harmonic commonplace, the presence of analogue synthesizers and electronic textures leading them away from the typical surfer-town local band, all these qualities resting placidly on their 4-piece Vocal Harmonies, and the uniqueness of the change in the band’s sound when bass and guitar are alternatively swapped around by the two main singers. The members of pug are: Nicolás Velez, on drums and vocals. Santiago Gavioli on Keys, Synths and Vocals, Valentin Gonzales and Gabriel Domeneghini on Guitar/Bass and Vocals. All of PUG's members produce, record, and write their music, taking active parts of the creative process. At this moment PUG is finishing the recording process of their first full-length Album, alternating local gigs with regional tours to perform in neighboring states. For the future PUG has plans to take their music abroad, playing in venues and festivals, expanding their following to other countries and continents. Follow them on their social networks under @pugband or come and meet them personally on the streets of San Francisco, Nayarit. Ánimo.
-          <br><br>
-          PS: if you book them, they will come.
+          <div class="hidden-text mt-5" :class="{'visible' : completeBio}">
+            Their chosen path to success is anomalous as well: four experienced musicians from different cities in Argentina, by luck, or chance or synchronicity altogether converge for a period of time in a town of around 3000 inhabitants: San Francisco, Nayarit, on the Mexican pacific coastline. Instead of going to the Big city to follow the narrative of the average Rock n roll mythology, they decide to stay local, searching for a real human following in an evermore virtual world. The town is actively visited by travelers from all around the world, so it is here where they have the chance to connect with people from very different places while retaining the unique aspects of a small community scene. The music is also something different, driven by poetic lyrics written in Spanish, groovy tunes that strive to get outside the harmonic commonplace, the presence of analogue synthesizers and electronic textures leading them away from the typical surfer-town local band, all these qualities resting placidly on their 4-piece Vocal Harmonies, and the uniqueness of the change in the band’s sound when bass and guitar are alternatively swapped around by the two main singers. The members of pug are: Nicolás Velez, on drums and vocals. Santiago Gavioli on Keys, Synths and Vocals, Valentin Gonzales and Gabriel Domeneghini on Guitar/Bass and Vocals. All of PUG's members produce, record, and write their music, taking active parts of the creative process. At this moment PUG is finishing the recording process of their first full-length Album, alternating local gigs with regional tours to perform in neighboring states. For the future PUG has plans to take their music abroad, playing in venues and festivals, expanding their following to other countries and continents. Follow them on their social networks under @pugband or come and meet them personally on the streets of San Francisco, Nayarit. Ánimo.
+            <br><br>
+            PS: if you book them, they will come.
+          </div>
         </div>
       </div>
     </div>
@@ -66,6 +68,16 @@ export default {
   components: {
     'channel-list': channelList,
     //'stage-plot': stagePlot
+  },
+  data() {
+    return {
+      completeBio: false
+    }
+  },
+  methods: {
+    toggleCompleteBio() {
+      this.completeBio = !this.completeBio;
+    }
   }
 }
 </script>
@@ -91,6 +103,22 @@ export default {
       h1 {
         font-size: 64px;
         margin-top: -50px;
+        position: relative;
+        .epk {
+          font-family: 'New Tegomin';
+          font-size: 22px;
+          position: absolute;
+          right: -8px;
+          top: -8px;
+          transform: rotate(-10deg);
+          color: #fff;
+          z-index: 2;
+          padding: 1px 3px 9px 3px;
+          //background: rgba(0,0,0,.8);
+          text-shadow: 0 0 10px #000;
+          border-radius: 2px;
+          line-height: 20px;
+        }
       }
       .overlay {
         z-index: -1;
@@ -101,6 +129,14 @@ export default {
         height: 100%;
         background-image: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0.50) 50%, rgba(0, 0, 0, 0.25) 75%, rgba(0, 0, 0, 0) 100%);
       }
+    }
+  }
+  .hidden-text {
+    max-height: 0;
+    transition: all .3s;
+    overflow: hidden;
+    &.visible {
+      max-height: 800px;
     }
   }
   .stage-plot {
