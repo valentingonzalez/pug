@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-center mb-5">CHANNEL LIST</h2>
+    <h2 class="text-center mb-5 text-uppercase">{{$t('channel-list')}}</h2>
     <div class="row channels">
       <div class="col-md-6">
         <div class="channel" v-for="(c, i) in channelsFirstHalf" :key="`channel${i}`">
