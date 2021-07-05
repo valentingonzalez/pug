@@ -4,7 +4,7 @@
       {{ $t('bio.p1') }}
       <br><br>
       <div class="flex-column flex-md-row d-flex align-items-center">
-        <iframe class="w-100 mb-4 mb-md-0" src="https://open.spotify.com/embed/album/1xKeg2riD39VcTIfFZ5F5X" width="300" height="260" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe class="w-100 mb-4 mb-md-0" src="https://open.spotify.com/embed/album/6l6Nw3eR6XmpFAVNbRFb4b" width="300" height="260" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         <div class="ml-md-5">
           <div v-html="$t('bio.p2')"></div>
           <a class="link font-weight-bold small" @click.prevent="toggleCompleteBio" href="#">Read {{completeBio ? 'less' : 'more'}}</a>

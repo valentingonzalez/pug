@@ -10,10 +10,10 @@
           <a href="https://facebook.com/pugband" target="_blank">
             <gb-social-button class="mx-2" network="facebook" iconTheme="white" reverse />
           </a>
-          <a href="https://open.spotify.com/artist/42AlM3mhpBiyvPdYqI5JHq?si=tcZVyAZtSeCoxCBaWxCUPg" target="_blank">
+          <a href="https://open.spotify.com/artist/4ALXo8gXmmSPzrP1tqOzNr" target="_blank">
             <gb-social-button class="mx-2" network="spotify" iconTheme="white" reverse />
           </a>
-          <a href="https://music.apple.com/mx/artist/pug/1464251151" target="_blank">
+          <a href="https://music.apple.com/mx/artist/pugband/1567537145" target="_blank">
             <gb-social-button class="mx-2" network="apple" iconTheme="white" reverse />
           </a>
           <a href="https://www.youtube.com/channel/UC3K41lggo00AcSj23SwSVCg" target="_blank">
